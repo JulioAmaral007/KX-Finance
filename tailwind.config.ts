@@ -13,6 +13,19 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+
+      gridTemplateColumns: {
+        app: 'minmax(12rem, 15rem) 1fr',
+        profile: 'max-content 1fr max-content',
+        transactions: '1fr 1fr 1fr',
+        dash: '1fr 280px',
+      },
+
+      colors: {
+        'gray-dark': 'rgb(24,24,27)',
+        'tx-gray-dark': 'rgb(161, 161, 170)',
+        'gray-hover': 'rgb(250, 250, 250)'
+      }
     },
   },
   plugins: [],
