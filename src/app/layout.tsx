@@ -1,3 +1,4 @@
+import { Sidebar } from '@/components/Sidebar'
 import { NextAuthProvider } from '@/providers/auth'
 import type { Metadata } from 'next'
 import { Ubuntu_Mono } from 'next/font/google'
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body className={ubuntuMono.className}>
         <NextAuthProvider>
           <div className="grid min-h-screen grid-cols-app bg-white">
+            <Sidebar />
             <main className="pb-12 pt-14 lg:col-start-2 lg:px-2 lg:pt-0">
               {children}
             </main>
