@@ -1,5 +1,6 @@
 import { Sidebar } from '@/components/Sidebar'
 import { NextAuthProvider } from '@/providers/auth'
+import { ToastProvider } from '@/providers/toast'
 import type { Metadata } from 'next'
 import { Ubuntu_Mono } from 'next/font/google'
 import './globals.css'
@@ -35,12 +36,14 @@ export default function RootLayout({
     <html lang="en" className="light antialiased">
       <body className={ubuntuMono.className}>
         <NextAuthProvider>
-          <div className="grid min-h-screen grid-cols-app bg-white">
-            <Sidebar />
-            <main className="pb-12 pt-14 lg:col-start-2 lg:px-2 lg:pt-0">
-              {children}
-            </main>
-          </div>
+          <ToastProvider>
+            <div className="grid min-h-screen grid-cols-app bg-white">
+              <Sidebar />
+              <main className="pb-12 pt-14 lg:col-start-2 lg:px-2 lg:pt-0">
+                {children}
+              </main>
+            </div>
+          </ToastProvider>
         </NextAuthProvider>
       </body>
     </html>
