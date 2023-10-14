@@ -2,10 +2,10 @@ import { Sidebar } from '@/components/Sidebar'
 import { NextAuthProvider } from '@/providers/auth'
 import { ToastProvider } from '@/providers/toast'
 import type { Metadata } from 'next'
-import { Ubuntu_Mono } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import './globals.css'
 
-const ubuntuMono = Ubuntu_Mono({ subsets: ['latin'], weight: '400' })
+const roboto = Roboto({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   title: 'Finance',
@@ -34,10 +34,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="light antialiased">
-      <body className={ubuntuMono.className}>
+      <body className={roboto.className}>
         <NextAuthProvider>
           <ToastProvider>
-            <div className="grid min-h-screen grid-cols-app bg-white">
+            <div className="grid min-h-screen lg:grid-cols-app bg-gray6">
               <Sidebar />
               <main className="pb-12 pt-14 lg:col-start-2 lg:px-2 lg:pt-0">
                 {children}

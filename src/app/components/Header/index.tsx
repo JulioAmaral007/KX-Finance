@@ -1,5 +1,4 @@
 'use client'
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,11 +25,11 @@ export function Header({ title }: HeaderProps) {
 
   return (
     <div className="flex h-[93px] w-screen items-center justify-between px-5 lg:w-full">
-      <strong className="text-3xl text-zinc-900">{title}</strong>
+      <strong className="text-3xl text-zinc-200">{title}</strong>
 
       {status === 'unauthenticated' && (
         <button
-          className="text-sm font-semibold text-black"
+          className="text-sm font-semibold text-zinc-200"
           onClick={handleSingIn}
         >
           Login
@@ -47,11 +46,11 @@ export function Header({ title }: HeaderProps) {
             <DropdownMenuContent className="mr-3 mt-2 bg-primary-foreground">
               <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem className="text-primary border-border cursor-pointer border-b border-solid pb-2 text-sm font-semibold">
+              <DropdownMenuItem className="text-zinc-200 border-border cursor-pointer border-b border-solid pb-2 text-sm font-semibold">
                 <Link href="/profile">Meu perfil</Link>
               </DropdownMenuItem>
               <DropdownMenuItem
-                className="text-primary cursor-pointer pt-2 text-sm font-semibold"
+                className="text-zinc-200 cursor-pointer pt-2 text-sm font-semibold"
                 onClick={handleSignOut}
               >
                 Sair
