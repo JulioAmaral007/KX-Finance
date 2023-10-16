@@ -1,13 +1,12 @@
-'use client'
 import { Header } from '../components/Header'
 import { CreateItem } from './components/CreateItem'
-import { Items } from './components/Items'
+import { ListItems } from './components/ListItems'
 
-export interface IProps {
-  id: string
-  title: string
-  isCompleted: boolean
-}
+// export interface IProps {
+//   id: string
+//   title: string
+//   isCompleted: boolean
+// }
 
 export default function Mercado() {
   // const [tasks, setTasks] = useState<IProps[]>([])
@@ -63,11 +62,7 @@ export default function Mercado() {
     <div>
       <Header title="Mercado" />
       <CreateItem />
-      <Items
-      // tasks={tasks}
-      // onDelete={deleteTaskById}
-      // onComplete={toggleTaskCompletedById}
-      />
+      <ListItems />
     </div>
   )
 }

@@ -43,7 +43,6 @@ export function Header({ title }: HeaderProps) {
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-2 outline-none">
               <Menu size={20} className="cursor-pointer text-gray2" />
-
               <Image
                 src={data.user.image!}
                 alt={data.user.name!}
