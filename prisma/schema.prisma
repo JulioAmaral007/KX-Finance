@@ -42,6 +42,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  shops         Shop[]
 }
 
 model VerificationToken {
@@ -50,4 +51,24 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model Transaction {
+  id    String   @id @default(uuid())
+  name  String
+  date  DateTime
+  price Decimal  @db.Decimal(8, 2)
+
+  @@map("transaction")
+}
+
+model Shop {
+  id          String  @id @default(uuid())
+  name        String
+  quantity    String
+  category    String
+  userId      String
+  user        User    @relation(fields: [userId], references: [id])
+
+  @@map("shop")
 }
