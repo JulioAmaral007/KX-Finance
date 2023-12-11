@@ -12,9 +12,9 @@ export function NavItem({ title, icon: Icon }: NavItemProps) {
       href={`${
         title.toLowerCase() === 'dashboard' ? '/' : `${title.toLowerCase()}`
       }`}
-      className="group flex items-center p-5 rounded-full hover:bg-primary"
+      className="group flex items-center p-7"
     >
-      <Icon className="h-5 w-5 text-primaryLight" />
+      <Icon className="h-7 w-7 text-primaryLight" />
     </Link>
   )
 }

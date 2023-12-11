@@ -1,4 +1,4 @@
-import { Sidebar } from '@/components/BottomBar'
+import { Sidebar } from '@/app/components/BottomBar'
 import { ToastProvider } from '@/providers/toast'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
