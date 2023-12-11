@@ -1,4 +1,4 @@
-import { Sidebar } from '@/components/Sidebar'
+import { Sidebar } from '@/components/BottomBar'
 import { ToastProvider } from '@/providers/toast'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
@@ -35,11 +35,9 @@ export default function RootLayout({
     <html lang="en" className="light antialiased">
       <body className={roboto.className}>
         <ToastProvider>
-          <div className="grid min-h-screen lg:grid-cols-app bg-gray6">
+          <div className="grid min-h-screen bg-gray6">
+            <main className="pb-12 pt-2 lg:col-start-2">{children}</main>
             <Sidebar />
-            <main className="pb-12 pt-14 lg:col-start-2 lg:px-2 lg:pt-0">
-              {children}
-            </main>
           </div>
         </ToastProvider>
       </body>
